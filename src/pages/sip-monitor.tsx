@@ -43,8 +43,11 @@ export default function SIPMonitorPage() {
     }, []);
 
     const socketInitializer = async () => {
+        // Use environment variable or fallback to current origin
+        const SOCKET_URL = process.env.NEXT_PUBLIC_SOCKET_URL || window.location.origin;
+
         // Connect to SIP monitor backend
-        socket = io('http://localhost:3001');
+        socket = io(SOCKET_URL);
 
         socket.on('initial_state', (data: Trunk[]) => {
             setTrunks(data);

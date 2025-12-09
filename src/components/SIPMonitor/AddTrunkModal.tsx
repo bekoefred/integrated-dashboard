@@ -45,9 +45,11 @@ const AddTrunkModal: React.FC<AddTrunkModalProps> = ({ isOpen, onClose, trunk })
         e.preventDefault();
         console.log('Form submitted with data:', formData);
 
+        // Use environment variable or fallback to current origin
+        const API_URL = process.env.NEXT_PUBLIC_SOCKET_URL || window.location.origin;
         const url = trunk
-            ? `http://localhost:3001/api/trunks/${trunk.id}`
-            : 'http://localhost:3001/api/trunks';
+            ? `${API_URL}/api/trunks/${trunk.id}`
+            : `${API_URL}/api/trunks`;
 
         const method = trunk ? 'PUT' : 'POST';
         console.log('Making request to:', url, 'with method:', method);

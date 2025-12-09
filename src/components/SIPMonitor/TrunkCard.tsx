@@ -26,7 +26,9 @@ const TrunkCard: React.FC<TrunkCardProps> = ({ trunk, onEdit }) => {
     const handleDelete = async () => {
         if (confirm('Are you sure you want to delete this trunk?')) {
             try {
-                await fetch(`http://localhost:3001/api/trunks/${trunk.id}`, {
+                // Use environment variable or fallback to current origin
+                const API_URL = process.env.NEXT_PUBLIC_SOCKET_URL || window.location.origin;
+                await fetch(`${API_URL}/api/trunks/${trunk.id}`, {
                     method: 'DELETE',
                 });
             } catch (err) {
