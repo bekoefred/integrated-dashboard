@@ -7,6 +7,7 @@ import { Logout } from "@components/assets/svgs/Logout";
 import { getTime } from "@components/utils/getTime";
 import { useEffect, useState } from "react";
 import { getLastUpdateTime } from "@components/utils/getLastUpdateTime";
+import Link from "next/link";
 
 const loadDateTime = new Date();
 const Navbar = () => {
@@ -26,7 +27,7 @@ const Navbar = () => {
     >
       <div className="flex items-center gap-6">
         <h1 className="text-[21px] font-semibold">Dashboard </h1>
-        <a
+        <Link
           href="/sip-monitor"
           className="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-all text-sm font-medium shadow-sm"
         >
@@ -34,7 +35,7 @@ const Navbar = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
           </svg>
           SIP Monitor
-        </a>
+        </Link>
       </div>
       <div className="flex items-center">
         <span className="pr-5 border-r-2 border-app-gray-4">
