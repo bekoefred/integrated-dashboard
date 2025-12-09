@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+* {
+    box-sizing: border-box;
+    /* for debugging */
+    /* border: 1px red solid; */
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+canvas {
+    margin: auto;
+}
+
+.ongoing-calls-table tbody tr:nth-child(odd) {
+    background-color: #F2F2F2;
+}
+
+.ongoing-calls-table {
+    width: 100% !important;
+    min-width: 100%;
+}
+
+.call-stats-row>*:not(:last-child) {
+    border-right: 1px solid #EAEAEA;
+}
+
+
+
+
+#dropdown {
+    display: none;
+}
+
+#dropdown:not(.hidden) {
+    display: block;
+}
+
+#filters li:last-child {
+    border: none;
+}
+
+.recharts-tooltip-wrapper {
+    font-size: 12px !important;
+    font-family: '__Inter_0ec1f4', '__Inter_Fallback_0ec1f4'
+}
+
+.react-datepicker {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 16px !important;
+    border: none !important;
+    width: 400px !important;
+
+}
+
+.react-datepicker__input-container input {
+    /* background-color: white !important; */
+    padding: 5px 10px;
+    width: fit-content !important;
+    border-radius: 5px;
+    outline: none;
+}
+
+.react-datepicker__triangle {
+    display: none;
+}
+
+.react-datepicker__header {
+    background: white !important;
+    font-size: 16px !important;
+}
+
+.react-datepicker__day--selected {
+    background-color: #0052B4 !important;
+}
+
+.react-datepicker__navigation-icon {
+    top: 8px !important;
+}
+
+.react-datepicker__input-container input {
+    font-size: 14px;
+    width: 180px !important;
+}
+
+
+.react-datepicker__week,
+.react-datepicker__day-names {
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.react-datepicker__day-names {
+    margin-top: 20px !important;
+}
+
+.react-datepicker__month-container {
+    width: 100% !important;
+}
+
+
+.react-datepicker__navigation-icon--previous::before {
+    content: "next";
+}
+
+.react-datepicker__input-container input {
+    cursor: pointer;
+    background-color: transparent !important;
+}
+
+.ongoing-calls-table td,
+.ongoing-calls-table th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    padding: 8px 1rem;
+}
+
+.ongoing-calls-table tr>td:last-child,
+.ongoing-calls-table tr>th:last-child {
+    text-align: right;
+}
+
+table thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.spinner {
+    text-align: center;
+}
+
+.spinner>div {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+.social-login-button {
+    background: #fafbfc;
+    border: .8px solid #e3e8ec !important;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .04) !important;
+    border-radius: 3px;
+    color: #485465;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #212f3f;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+hr {
+    border: 0;
+    border-top-color: currentcolor;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.shake-card {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+  
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+  
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+  
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+  
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+  
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+  
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+  
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+  
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+  
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+  
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }

@@ -1,0 +1,48 @@
+{
+  "name": "mergdata-moniter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 3928",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/node": "18.16.3",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.1",
+    "@types/socket.io": "^3.0.2",
+    "autoprefixer": "10.4.14",
+    "body-parser": "^2.2.1",
+    "chart.js": "^4.3.0",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "eslint": "8.39.0",
+    "eslint-config-next": "^13.4.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.0",
+    "lucide-react": "^0.555.0",
+    "next": "13.5.6",
+    "next-auth": "^4.22.1",
+    "postcss": "8.4.31",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-datepicker": "^4.12.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-table": "^7.8.0",
+    "recharts": "^2.5.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "4.4.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/react-datepicker": "^4.11.2",
+    "@types/react-table": "^7.7.14"
+  }
+}
